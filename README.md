@@ -1,4 +1,4 @@
-# Sphinx.bot v.0.1b
+# Sphinx.bot
 
 Sphinx.bot is a platform for collecting data leaks. All information recorded here is publicly available on the web. Any malicious use of this information is strictly prohibited.
 
