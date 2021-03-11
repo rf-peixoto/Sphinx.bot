@@ -14,6 +14,6 @@ These are the commands available only to the developer, the personal profile inf
 These are the public commands, available to all members of the server:
 ```
 .ping               Check the Sphinx.bot connection.
-.check [email]      Checks records related to [email]. If something is found, the reply will be sent on a private channel to the author of the message.
+.check [email]      Checks records related to [email]. If found, the reply will be sent on a DM.
 .size               Checks the current number of emails in the database.
 ```
