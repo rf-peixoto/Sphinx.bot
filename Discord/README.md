@@ -6,9 +6,9 @@ To use this version, add it to a group, configure the file [utils.py](https://gi
 
 These are the commands available only to the developer, the personal profile informed in the settings:
 ```
-.dump       Starts the database, once Sphinx.bot is online.
-.remove     Command not yet implemented.
-.log        Saves all activities performed during the session.
+.dump               Starts the database, once Sphinx.bot is online.
+.remove [email]     Remove [email] from the current session. It is still necessary to manually remove on the database.
+.log                Saves all activities performed during the session.
 ```
 
 These are the public commands, available to all members of the server:
