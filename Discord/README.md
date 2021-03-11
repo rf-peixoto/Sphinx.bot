@@ -1,4 +1,4 @@
-This is the implementation of **Sphinx.bot** for Discord. You can access the official server [here](https://discord.gg/m2vvU67qCg). Keep in mind that this is a beta version. Sphinx.bot will not be available for consultation at all times. Before suggesting any changes, check the TODO file.
+This is the implementation of **Sphinx.bot** for Discord. You can access the official server [here](https://discord.gg/m2vvU67qCg). Keep in mind that this is a beta version. **Sphinx.bot** will not be available for consultation at all times. Before suggesting any changes, check the [TODO](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/TODO.md) file.
 
 To use this version, add it to a group, configure the file [utils.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/utils.py) and run [client.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/client.py).
 
