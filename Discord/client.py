@@ -48,7 +48,7 @@ async def on_message(message):
                 manager.dump()
                 await message.add_reaction('\u2611')
                 await message.channel.send("Records have been updated.")
-                log.append("{0} | Update complete..".format(time_string))
+                log.append("{0} - Update complete..".format(time_string))
             except Exception as error:
                 print(error)
                 await message.channel.send("There was an error in the operation. Check the log for more details.")
@@ -62,7 +62,7 @@ async def on_message(message):
                 tmp = util.sanitize(message.content.split(".remove ")[-1])
                 manager.users.pop(tmp)
                 await message.channel.send("The address has been successfully removed.")
-                log.append("{0} | The address {1} has been removed.".format(time_string, tmp))
+                log.append("{0} - The address {1} has been removed.".format(time_string, tmp))
             except Exception as error:
                 print(error)
                 await message.channel.send("There was an error while trying to remove this address. Check the history of operations.")
