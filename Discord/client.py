@@ -60,7 +60,7 @@ async def on_message(message):
             await message.channel.trigger_typing()
             try:
                 tmp = util.sanitize(message.content.split(".remove ")[-1])
-                manager.users.pop(tmp)
+                manager.users.update({tmp:"[REMOVED]"})
                 await message.channel.send("The address has been successfully removed.")
                 log.append("{0} - The address {1} has been removed.".format(time_string, tmp))
             except Exception as error:
@@ -93,7 +93,7 @@ async def on_message(message):
 
     # Check Account:
     if message.content.startswith(".check"):
-        tmp = util.sanitize(message.content.split(".check ")[-1])
+        tmp = util.sanitize(message.content.split(".check ")[-1]).lower()
         tmp_string = time_string + " - " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " - " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
         if util.check_string:
             # Check in DB:
