@@ -22,13 +22,11 @@ class Manager:
                         passwd = p.split(":")[1]
                         self.users.update({user:passwd})
                     except Exception as error:
-                        print(error)
-                        print("Error in {0}".format(p))
+                        print("Error in {0}: {1}".format(p, error))
                         continue
             print("Database updated.")
         except Exception as error:
-            print("An error has occurred!")
-            print(error)
+            print("An error has occurred: {0}".format(error))
 
     # Get Database size:
     def get_lenght(self):
