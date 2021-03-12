@@ -12,7 +12,7 @@ class Manager:
             for p in tmp_data:
                 #print(p)
                 if p.split(":")[0] in self.users.keys():
-                        if self.users[p.split(":")[0]] == p.split(":")[1]
+                        if self.users[p.split(":")[0]] == p.split(":")[1]:
                             print("This record is already in the database: {0}".format(p))
                         else:
                             self.users[p.split(":")[0]].update(self.users[p.split(":")[0]] + "," + p.split(":")[1]
