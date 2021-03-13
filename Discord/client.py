@@ -95,7 +95,7 @@ async def on_message(message):
     if message.content.startswith(".check"):
         tmp = util.sanitize(message.content.split(".check ")[-1]).lower()
         tmp_string = time_string + " - " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " - " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
-        if util.check_string:
+        if util.check_string(tmp):
             # Check in DB:
             try:
                 value = manager.get_data(tmp)
