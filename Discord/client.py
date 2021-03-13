@@ -63,6 +63,7 @@ async def on_message(message):
                 manager.users.update({tmp:"[REMOVED]"})
                 await message.channel.send("The address has been successfully removed.")
                 log.append("{0} - The address {1} has been removed.".format(time_string, tmp))
+                print(log[-1])
             except Exception as error:
                 print(error)
                 await message.channel.send("There was an error while trying to remove this address. Check the history of operations.")
