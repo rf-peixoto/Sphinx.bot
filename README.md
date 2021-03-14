@@ -10,7 +10,7 @@
   
 ## Contributing
 
-Help is always welcome. Check the TODO file for the most important changes to make before suggesting anything. You can also contribute to the project with donations, so that we can expand the database, servers and implement **Sphinx.bot** on other platforms.
+Help is always welcome. Check the TODO file for the most important changes to make before suggesting anything. You can also contribute to the project with leaks and donations, so that we can expand the database, servers and implement **Sphinx.bot** on other platforms.
 
 ## Donate
 
