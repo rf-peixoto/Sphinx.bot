@@ -1,8 +1,10 @@
 # Dependences:
 from datetime import datetime
+from mail_sender import MailSender
 from manager import Manager
 from utils import Utils
 import discord
+import secrets
 
 #--------------------------------------------------#
 # Log
@@ -13,7 +15,10 @@ client = discord.Client()
 util = Utils()
 # DB Manager:
 manager = Manager()
-
+# Mail Sender:
+mail_sender = MailSender()
+# Removal Tokens:
+tokens = {}
 #--------------------------------------------------#
 # On Start:
 @client.event
@@ -52,21 +57,6 @@ async def on_message(message):
             except Exception as error:
                 print(error)
                 await message.channel.send("There was an error in the operation. Check the log for more details.")
-            return
-
-        # Remove account:
-        if message.content.startswith(".remove"):
-            await message.delete()
-            await message.channel.trigger_typing()
-            try:
-                tmp = util.sanitize(message.content.split(".remove ")[-1])
-                manager.users.update({tmp:"[REMOVED]"})
-                await message.channel.send("The address has been successfully removed.")
-                log.append("{0} - The address {1} has been removed.".format(time_string, tmp))
-                print(log[-1])
-            except Exception as error:
-                print(error)
-                await message.channel.send("There was an error while trying to remove this address. Check the history of operations.")
             return
 
         # Save log:
@@ -114,6 +104,40 @@ async def on_message(message):
                 await message.channel.send("There was an error in the search, check the history of operations.")
         else:
             await message.channel.send("I couldn't verify this address. Please check your message and try again.")
+        return
+
+    # Send Removal Token:
+    if message.content.startswith(".remove"):
+        await message.delete()
+        await message.channel.trigger_typing()
+        try:
+            tmp = util.sanitize(message.content.split(".remove ")[-1])
+            this_email_token = util.sanitize(secrets.token_urlsafe(8))
+            await message.channel.send("You will receive a token for removing this email in the next few minutes. Check your spam box and follow the instructions.")
+            tokens.update({this_email_token:tmp})
+            mail_sender.send_email(tmp, this_email_token)                
+        except Exception as error:
+            print(error)
+            await message.channel.send("There was an error while trying to remove this address. Check the history of operations.")
+        return
+
+    # Remove Account With Token:
+    if message.content.startswith(".verify "):
+        tmp = util.sanitize(message.content.split(".verify ")[-1])
+        await message.channel.trigger_typing()
+        if tmp in tokens.keys():
+            try:
+                address = tokens.pop(tmp)
+                manager.users.update({address:"[REMOVED]"})
+                log.append("{0} - The address {1} has been removed.".format(time_string, address))
+                print(log[-1])
+                await message.add_reaction('\u2611')
+                await message.channel.send("The address has been successfully removed.")
+            except Exception as error:
+                await message.channel.send("There was an error while trying to remove this address. Check the history of operations.")
+                print(error)
+        else:
+            await message.channel.send("I was unable to recognize this token. Check your email or contact support.")
         return
 
     # Get DB Size:
