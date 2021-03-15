@@ -111,7 +111,7 @@ async def on_message(message):
         await message.delete()
         await message.channel.trigger_typing()
         try:
-            tmp = util.sanitize(message.content.split(".remove ")[-1])
+            tmp = util.sanitize(message.content.split(".remove ")[-1]).lower()
             this_email_token = util.sanitize(secrets.token_urlsafe(8))
             await message.channel.send("You will receive a token for removing this email in the next few minutes. Check your spam box and follow the instructions.")
             tokens.update({this_email_token:tmp})
