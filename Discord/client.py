@@ -31,7 +31,7 @@ async def on_read():
 async def on_message(message):
     # Time of the Message:
     time = datetime.now()
-    time_string = "{1}/{0}/{2} - {3}:{4}".format(time.day, time.month, time.year, time.hour, time.minute)
+    time_string = "{1}/{0}/{2} | {3}:{4}".format(time.day, time.month, time.year, time.hour, time.minute)
 
     # Ignore Bots as Authors:
     if message.author == client.user or message.author.bot:
@@ -85,7 +85,7 @@ async def on_message(message):
     # Check Account:
     if message.content.startswith(".check"):
         tmp = util.sanitize(message.content.split(".check ")[-1]).lower()
-        tmp_string = time_string + " - " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " - " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
+        tmp_string = time_string + " | " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " | " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
         if util.check_string(tmp):
             # Check in DB:
             try:
@@ -93,13 +93,13 @@ async def on_message(message):
                 if value:
                     await message.delete()
                     await message.author.send("```{0}:{1}```".format(tmp, value))
-                    log.append(tmp_string + " - 0")
-                    print(tmp_string + " - 0")
+                    log.append(tmp_string + " | 0")
+                    print(tmp_string + " | 0")
                 else:
                     await message.delete()
                     await message.channel.send("This address is not in my database.")
-                    log.append(tmp_string + " - 1")
-                    print(tmp_string + " - 1")
+                    log.append(tmp_string + " | 1")
+                    print(tmp_string + " | 1")
             except Exception as error:
                 await message.channel.send("There was an error in the search, check the history of operations.")
         else:
