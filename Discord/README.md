@@ -12,7 +12,7 @@ These are the commands available only to the developer, the personal profile inf
 
 The _.log_ command will generate a list with the following structure:
 
-``` [DATE] - [TIME] - [GUILD:CHANNEL] - [USER][USER ID] are looking for [QUERY] - [RESULT] ```
+``` [DATE] | [TIME] | [GUILD:CHANNEL] | [USER][USER ID] are looking for [QUERY] | [RESULT] ```
 
 To facilitate further analysis, the last parameter **[RESULT]** will return **0** if the query is successful and **1** if the record has not been found. The next are the public commands, available to all members of the server:
 ```
