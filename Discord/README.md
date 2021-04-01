@@ -1,6 +1,6 @@
 This is the implementation of **Sphinx.bot** for Discord. You can access the official server [here](https://discord.gg/m2vvU67qCg). Keep in mind that this is a beta version. **Sphinx.bot** will not be available for consultation at all times. Before suggesting any changes, check the [TODO](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/TODO.md) file.
 
-To use this version, add it to a group, configure the file [utils.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/utils.py) and [mail_sender.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/mail_sender.py) . Then run [client.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/client.py).
+To use this version, add it to a group, configure the file [tools.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/tools.py) and [mail_sender.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/mail_sender.py) . Then run [client.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/client.py).
 
 ## Commands
 
