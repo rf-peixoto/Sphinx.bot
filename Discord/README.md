@@ -6,7 +6,7 @@ To use this version, add it to a group, configure the file [utils.py](https://gi
 
 These are the commands available only to the developer, the personal profile informed in the settings:
 ```
-.dump               Starts the database, once Sphinx.bot is online.
+.exclude            Manually delete a record.
 .log                Saves all activities performed during the session.
 ```
 
@@ -17,7 +17,6 @@ The _.log_ command will generate a list with the following structure:
 To facilitate further analysis, the last parameter **[RESULT]** will return **0** if the query is successful and **1** if the record has not been found. The next are the public commands, available to all members of the server:
 ```
 .ping               Check the Sphinx.bot connection.
-.size               Checks the current number of emails in the database.
 .check [email]      Checks records related to [email]. If found, the reply will be sent on a DM.
 .remove [email]     Send a verification message to the [email] to be removed.
 .verify [token]     Checks whether the token is valid and removes an email previously used in the .remove option.

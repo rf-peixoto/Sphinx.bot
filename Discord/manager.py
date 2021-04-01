@@ -1,49 +1,36 @@
+import sqlite3
+
 class Manager:
-    # Initialize Manager:
+    # Initialize:
     def __init__(self):
-        self.users = {}
-
-    # Initialize Database:
-    def dump(self):
         try:
-            with open("accounts.txt", "r") as fl:
-                tmp_data = fl.read().split("\n")
-                fl.close()
-            for p in tmp_data:
-                #print(p)
-                if p.split(":")[0] in self.users.keys():
-                        if self.users[p.split(":")[0]] == p.split(":")[1]:
-                            print("This record is already in the database: {0}".format(p))
-                        else:
-                            self.users[p.split(":")[0]].update(self.users[p.split(":")[0]]) + "," + p.split(":")[1]
-                else:
-                    try:
-                        user = p.split(":")[0].lower()
-                        passwd = p.split(":")[1]
-                        self.users.update({user:passwd})
-                    except Exception as error:
-                        print("Error in {0}: {1}".format(p, error))
-                        continue
-            print("Database updated.")
+            self.db = sqlite3.connect("database.db")
+            self.cursor = self.db.cursor()
         except Exception as error:
-            print("An error has occurred: {0}".format(error))
+            print("Error while openning the database: {0}".format(error))
 
-    # Get Database size:
-    def get_lenght(self):
-        return len(self.users.keys())
-
-    # Get Statement:
+    # Get Data:
     def get_data(self, email):
         try:
-            return self.users.get(email)
+            self.cursor.execute("SELECT password FROM accounts WHERE email='{0}'".format(email))
+            return self.cursor.fetchone()[0]
         except Exception as error:
-            print(error)
+            print("Error while searching for {0}: {1}".format(email, error))
 
-    # Remove data:
+    # Remove Data:
     def remove(self, email):
+        command = "UPDATE accounts SET password = '[REMOVED]' WHERE email='{0}'".format(email)
         try:
-            self.users.pop(email)
-            return 0
+            self.cursor.execute(command)
+            return True
         except Exception as error:
-            print(error)
-            return 1
+            print("Error while trying to remove {0}: {1}".format(email, error))
+
+    # Save Database:
+    def save_changes(self):
+        try:
+            self.db.commit()
+            return True
+        except Exception as error:
+            print('Error while saving: {0}'.format(error))
+
