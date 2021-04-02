@@ -30,7 +30,7 @@ async def on_read():
 async def on_message(message):
     # Time:
     time = datetime.now()
-    time_string = "{1}/{0}/{2} - {3}:{4}".format(time.day, time.month, time.year, time.hour, time.minute)
+    time_string = "{1}/{0}/{2} {3}:{4}".format(time.day, time.month, time.year, time.hour, time.minute)
 
     # Ignore Bots:
     if message.author == client.user or message.author.bot:
@@ -87,7 +87,7 @@ async def on_message(message):
         if not tools.check_string(tmp):
             await message.channel.send("I was unable to recognize this address. Check your email or contact support.")
             return
-        tmp_string = time_string + " | " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " - " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
+        tmp_string = time_string + " | " + "[{0}:{1}]".format(message.guild.name, message.channel.name) + " | " + message.author.name + "[{0}]".format(message.author.id) + " are looking for " + tmp
         if tools.check_string(tmp):
             # Check in DB:
             try:
