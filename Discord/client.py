@@ -51,7 +51,7 @@ async def on_message(message):
             email = tools.sanitize(message.content.split(".exclude ")[-1]).lower()
             try:
                 manager.remove(email)
-                log.append(time_string + "| The address {0} has been successfully removed from the system by an admin.".format(email))
+                log.append(time_string + " | The address {0} has been successfully removed from the system by an admin.".format(email))
                 print(log[-1])
                 await message.channel.send("The address has been successfully removed.")
                 return
@@ -72,6 +72,16 @@ async def on_message(message):
             log.clear()
             await message.add_reaction("\u2611")
             await message.channel.send("The activity history has been successfully exported.")
+            return
+
+        # Save Changes on Database:
+        if message.content.startswith(".commit"):
+            await message.delete()
+            try:
+                manager.save_changes()
+                print("The database was saved.")
+            except Exception as error:
+                print("An error ocurred while saving changes on database: {0}".format(error))
             return
 # ---------------------------------------------------------------------------- #
     # Ping:
