@@ -8,6 +8,7 @@ These are the commands available only to the developer, the personal profile inf
 ```
 .exclude            Manually delete a record.
 .log                Saves all activities performed during the session.
+.save               Save changes on the database itself.
 ```
 
 The _.log_ command will generate a list with the following structure:
