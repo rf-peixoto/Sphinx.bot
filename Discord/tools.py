@@ -12,7 +12,7 @@ class Tools:
         tmp = message.split(" ")[0]
         for c in self.trash:
             if c in tmp:
-                tmp.replace(c, '')
+                tmp = tmp.replace(c, '')
         counter -= 1
         if counter > 0:
             self.sanitize(tmp, counter)
