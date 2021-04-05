@@ -22,6 +22,7 @@ Enter the command below on the platform where the request was made:
 
 .verify {0}
 
+If you did not request this email, please ignore it.
 PLEASE DO NOT RESPOND TO THIS MESSAGE.""".format(token)
         #print("Creating message.") # DEBUG
         email = MIMEMultipart()
