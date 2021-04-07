@@ -13,7 +13,7 @@ These are the commands available only to the developer, the personal profile inf
 
 The _.log_ command will generate a list with the following structure:
 
-``` [DATE] | [TIME] | [GUILD:CHANNEL] | [USER][USER ID] are looking for [QUERY] ```
+``` [DATE] [TIME] | [GUILD:CHANNEL] | [USER][USER ID] are looking for [QUERY] ```
 
 The next are the public commands, available to all members of the server:
 
