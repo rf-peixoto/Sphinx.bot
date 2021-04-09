@@ -24,3 +24,4 @@ The next are the public commands, available to all members of the server:
 .verify [token]     Checks whether the token is valid and removes an email previously used in the .remove option.
 
 ```
+**DISCLAIMER:** To remain on the Discord server your profile must **1)** have an email registered on the platform, **2)** a profile photo and **3)** it does not have random names, sets of numbers and characters merged in order with no apparent meaning.
