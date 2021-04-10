@@ -43,7 +43,7 @@ async def on_message(message):
         return
 # ---------------------------------------------------------------------------- #
     # Owner Messages:
-    if str(message.author.id) == tools.owner_id[0]:
+    if str(message.author.id) == tools.owner_id:
         # Manual Exclusion
         if message.content.startswith(".exclude"):
             await message.delete()
