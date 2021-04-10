@@ -24,4 +24,4 @@ Monero    [XMR]     4AKqFQCkuj6FdqMdQ8bdsbY8cJggoZaoR4yL6HX6jyjqL9WWmiHqmKFVRe8R
 ```
 ## DISCLAIMER
 
-**Sphinx.bot** is not a service. There is no link between Sphinx.bot and its users, so there is no guarantee of access. By entering / staying on any **Sphinx.bot** server, you assume full responsibility for any actions you take using information provided by **Sphinx.bot**. I reserve the right to deny such access to any user, in any situation, without prior notice.
+**Sphinx.bot** is not a service. There is no link between **Sphinx.bot** and its users, so there is no guarantee of access. By entering / staying on any **Sphinx.bot** server, you assume full responsibility for any actions you take using information provided by **Sphinx.bot**. I reserve the right to deny such access to any user, in any situation, without prior notice.
