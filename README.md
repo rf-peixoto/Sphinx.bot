@@ -4,9 +4,12 @@
 
 ## FAQ
 
-  1. **Where is Sphinx.bot data collected?** From public sources on the internet.
+  1. **Where is Sphinx.bot data collected?** The data collected is, in general, from forums focused on digital security and _hacking_. Some of them include forums frequented by criminals where the information is sold. In addition to them, there is data from companies that resell access to this information, from free and paid services. Finally, I have some scrapers in the wild looking for data in repositories, pastes and the like.
   2. **What if I find sensitive information about me?** There is a command to remove your own data from our database. You just need access to the email you want to remove.
   3. **What is the purpose of disclosing this data?** All data exposed by **Sphinx.bot** has already been leaked in the past, no recent leaks (less than a month from the date of the discovery) will be included. The goal is to make people aware of the importance of changing their passwords frequently.
+  4. **How to use?** Check Github for detailed instructions or read the messages posted on the channel.
+  5. **How often is new data added?** There is no set deadline. New data can appear daily, weekly, monthly, etc.
+  6. **Could you monitor my address to remove it automatically?** Yes, but I won't. This function would require a lot of scalability for a project like this and I don't have the equipment to handle it. Check your addresses as often as you feel necessary.
   
   
 ## Contributing
