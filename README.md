@@ -24,7 +24,7 @@ Ethereum  [ETH]     0x1a47Ed0C52b07DFE329858D3aA1847Eccc2c105a
 Litecoin  [LTC]     M9Nex8ecVSpnyf1XamjHEmsZDhqF74cWPX
 Dogecoin  [DOGE]    DRWTE1wNxBTHxKy5Pek1rFHEqpqjPFTbZb
 Monero    [XMR]     4AKqFQCkuj6FdqMdQ8bdsbY8cJggoZaoR4yL6HX6jyjqL9WWmiHqmKFVRe8RfHmnAziZtTd8vqqUWN87GnP5DxQm6N8dCTm
-Ergo      [ERG]     88dhgzEuTXaUXSd5ZhoC9acaNZXdeLjusPv2QDCKCzjkmoLvdFY9PBxMX3UzfeqSPyd3GmQDAGmWn6Mq
+Ergo      [ERG]     9ftyziirHpu7PqPkdTG8jvxNDhb44tGL34mbHan2aKWCP4vfrDX
 ```
 ## DISCLAIMER
 
