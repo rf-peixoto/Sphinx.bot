@@ -1,5 +1,9 @@
 # Sphinx.bot
 
+[![rf-peixoto - Sphinx.bot](https://img.shields.io/static/v1?label=rf-peixoto&message=Sphinx.bot&color=blue&logo=github)](https://github.com/rf-peixoto/Sphinx.bot)
+[![stars - Sphinx.bot](https://img.shields.io/github/stars/rf-peixoto/Sphinx.bot?style=social)](https://github.com/rf-peixoto/Sphinx.bot)
+[![forks - Sphinx.bot](https://img.shields.io/github/forks/rf-peixoto/Sphinx.bot?style=social)](https://github.com/rf-peixoto/Sphinx.bot)
+
 **Sphinx.bot** is a platform for collecting data leaks. All information recorded here is publicly available on the web. Any malicious use of this information is strictly prohibited.
 
 ## FAQ
