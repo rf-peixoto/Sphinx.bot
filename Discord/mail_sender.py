@@ -22,8 +22,8 @@ Enter the command below on the platform where the request was made:
 
 .verify {0}
 
-If you did not request this email, please ignore it.
-PLEASE DO NOT RESPOND TO THIS MESSAGE.""".format(token)
+If you did not requested this email, please ignore it.
+DO NOT RESPOND TO THIS MESSAGE.""".format(token)
         #print("Creating message.") # DEBUG
         email = MIMEMultipart()
         email['From'] = self.sender
@@ -34,5 +34,4 @@ PLEASE DO NOT RESPOND TO THIS MESSAGE.""".format(token)
         #print("Sending...") # DEBUG
         self.server.sendmail(self.sender, recipient, email.as_string())
         #server.quit()
-
         return
