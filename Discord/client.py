@@ -109,7 +109,7 @@ async def on_message(message):
                     print(log[-1])
                 else:
                     await message.delete()
-                    await message.channel.send("This address is not in my database.")
+                    await message.channel.send("This address is not in my database yet.")
                     log.append(tmp_string)
                     print(log[-1])
             except Exception as error:
