@@ -4,7 +4,7 @@
 [![stars - Sphinx.bot](https://img.shields.io/github/stars/rf-peixoto/Sphinx.bot?style=social)](https://github.com/rf-peixoto/Sphinx.bot)
 [![forks - Sphinx.bot](https://img.shields.io/github/forks/rf-peixoto/Sphinx.bot?style=social)](https://github.com/rf-peixoto/Sphinx.bot)
 
-**Sphinx.bot** is a platform for collecting data leaks. All information recorded here is publicly available on the web. Any malicious use of this information is strictly prohibited.
+**Sphinx.bot** is a platform for collecting data leaks. All information recorded here is publicly available on the web. Any malicious use of this information is strictly prohibited. When you log into one of **Sphinx.bot**'s servers, you will notice that the service is offline. Given some technical limitations, the bot is still not available all the time. Contact the server **operator** to activate it.
 
 ## FAQ
 
@@ -28,6 +28,7 @@ Ethereum  [ETH]     0x1a47Ed0C52b07DFE329858D3aA1847Eccc2c105a
 Litecoin  [LTC]     M9Nex8ecVSpnyf1XamjHEmsZDhqF74cWPX
 Dogecoin  [DOGE]    DRWTE1wNxBTHxKy5Pek1rFHEqpqjPFTbZb
 LBRY      [LBRY]    bYcTSnZVVMwUC4R5L81Fbad7anrfpbn4B8
+Nano      [XNO]     nano_1pwu549afgpnkx4x97ad6c1nbszfuhcx8z55reowo71g78cb6cppz9r5yrqt
 Monero    [XMR]     4AKqFQCkuj6FdqMdQ8bdsbY8cJggoZaoR4yL6HX6jyjqL9WWmiHqmKFVRe8RfHmnAziZtTd8vqqUWN87GnP5DxQm6N8dCTm
 Ergo      [ERG]     9ftyziirHpu7PqPkdTG8jvxNDhb44tGL34mbHan2aKWCP4vfrDX
 ```
