@@ -1,4 +1,4 @@
-This is the implementation of **Sphinx.bot** for Discord. **The official server is temporarily closed and will not accept new members**. Keep in mind that this is a beta version. **Sphinx.bot** will not be available for consultation at all times. Before suggesting any changes, check the [TODO](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/TODO.md) file.
+This is the implementation of **Sphinx.bot** for Discord. **The official server is temporarily closed and will not accept new members**. Before suggesting any changes, check the [TODO](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/TODO.md) file.
 
 To use this version, add it to a group, configure the file [tools.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/tools.py) and [mail_sender.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/mail_sender.py) . Then run [client.py](https://github.com/rf-peixoto/Sphinx.bot/blob/main/Discord/client.py).
 
