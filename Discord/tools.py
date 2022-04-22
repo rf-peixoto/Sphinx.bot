@@ -2,6 +2,7 @@ import re
 
 class Tools:
     def __init__(self):
+        print("Starting tools.")
         self.client_id = 'BOT CLIENT ID'
         self.owner_id = 'BOT OWNER ID'
         self.bot_token = 'BOT TOKEN'
