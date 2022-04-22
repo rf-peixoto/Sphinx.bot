@@ -3,6 +3,7 @@ import sqlite3
 class Manager:
     # Initialize:
     def __init__(self):
+        print("Connecting to the database.")
         try:
             self.db = sqlite3.connect("database.db")
             self.cursor = self.db.cursor()
