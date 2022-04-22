@@ -9,7 +9,7 @@ class MailSender:
         self.sender = "YOUR EMAIL"
         self.sender_password = "YOUR PASSWORD"
         self.mail_subject = "Your BOT Token"
-        print("Connecting to email server. This could take a while.")
+        print("Starting gmail client. This could take a while.")
         self.server = smtplib.SMTP('smtp.gmail.com', 587)
         self.server.starttls()
         self.server.login(self.sender, self.sender_password)
