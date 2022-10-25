@@ -9,7 +9,7 @@ class Tools:
         self.trash = ['\r', '\n', '\t', '\0', "'", '"', '\\', '/', '&', '|', '#', '$', '%', '<', '>', '(', ')', '{', '}', ';', '*', '[', ']', '--', ' ', ',']
         self.email_pattern = "([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)"
 
-    def sanitize(self, message, counter=3):
+    def sanitize(self, message, counter=5):
         tmp = message.split(" ")[0]
         for c in self.trash:
             if c in tmp:
